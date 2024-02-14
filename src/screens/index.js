@@ -1,2 +1,3 @@
-import Dashboard from './Dashboard';
-export { Dashboard }
+import ChatScreen from './ChatScreen';
+
+export {ChatScreen}

@@ -1,13 +1,13 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
-import { Calls, Camera, Chats, Status } from './MaterialTopTabs';
+import { Calls, Camera, Chats, Status } from '../screens/MaterialTopTabs';
 import { COLORS } from '../constants/themes';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const Tab = createMaterialTopTabNavigator();
 
-export default function Dashboard() {
+export default function TopTabBars() {
     return (
         <Tab.Navigator
             initialRouteName='Chats'
