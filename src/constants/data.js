@@ -1,3 +1,7 @@
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
+import { COLORS } from './themes'
+
+
 const Chat = {
     id: '1',
     users: [{
@@ -12,132 +16,176 @@ const Chat = {
     }],
     messages: [{
         id: 'm1',
-        content: 'How are you, Lukas!',
-        createdAt: '2020-10-10T12:48:00.000Z',
+        content: 'Quis adipisicing officia consequat incididunt.',
+        imageUri: require('../assets/images/cp/1.jpg'),
+        createdAt: Date.now().toLocaleString(),
         user: {
             id: 'u1',
-            name: 'Vadim',
+            name: 'User 1',
         },
     },
     {
         id: 'm2',
-        content: 'I am good, good',
-        createdAt: '2020-10-03T14:49:00.000Z',
+        content: 'Adipisicing esse amet ea quis esse aliqua voluptate culpa mollit laboris sit ut pariatur consequat.',
+        imageUri: require('../assets/images/cp/2.jpg'),
+        createdAt: Date.now().toLocaleString(),
         user: {
             id: 'u2',
-            name: 'Lukas',
+            name: 'User 2',
         },
-    }, {
+    },
+    {
         id: 'm3',
-        content: 'What about you?',
-        createdAt: '2020-10-03T14:49:40.000Z',
+        content: 'Dolor sint deserunt ipsum culpa laborum culpa ex amet eiusmod esse ullamco ex adipisicing id.',
+        createdAt: Date.now().toLocaleString(),
+        imageUri: null,
         user: {
             id: 'u2',
-            name: 'Lukas',
+            name: 'User 2',
         },
-    }, {
+    },
+    {
         id: 'm4',
-        content: 'Good as well, preparing for the stream now.',
-        createdAt: '2020-10-03T14:50:00.000Z',
+        content: 'Qui culpa do ut laborum id sit id minim elit.',
+        createdAt: Date.now().toLocaleString(),
+        imageUri: require('../assets/images/cp/3.jpg'),
         user: {
             id: 'u1',
-            name: 'Vadim',
+            name: 'User 1',
         },
-    }, {
+    },
+    {
         id: 'm5',
-        content: 'How is your uni going?',
-        createdAt: '2020-10-03T14:51:00.000Z',
+        content: 'Adipisicing voluptate excepteur amet fugiat laborum ullamco sint commodo.',
+        imageUri: require('../assets/images/cp/4.jpg'),
+        createdAt: Date.now().toLocaleString(),
         user: {
             id: 'u1',
-            name: 'Vadim',
+            name: 'User 1',
         },
-    }, {
+    },
+    {
         id: 'm6',
-        content: 'It is a bit tough, as I have 2 specializations. How about yours? Do you enjoy it?',
-        createdAt: '2020-10-03T14:49:00.000Z',
+        content: 'Excepteur consequat laboris sint ex eu est consectetur deserunt occaecat commodo magna nostrud anim incididunt.',
+        imageUri: null,
+        createdAt: Date.now().toLocaleString(),
         user: {
             id: 'u2',
-            name: 'Lukas',
+            name: 'User 2',
         },
-    }, {
+    },
+    {
         id: 'm7',
-        content: 'Big Data is really interesting. Cannot wait to go through all the material.',
-        createdAt: '2020-10-03T14:53:00.000Z',
+        content: 'Id est nulla commodo excepteur minim et quis ullamco culpa velit nisi occaecat aute eu.',
+        createdAt: Date.now().toLocaleString(),
+        imageUri: require('../assets/images/cp/5.jpg'),
         user: {
             id: 'u1',
-            name: 'Vadim',
+            name: 'User 1',
+        },
+    },
+    {
+        id: 'm7',
+        content: 'Laboris anim elit commodo eu magna nostrud esse deserunt sit ex excepteur duis ad.',
+        imageUri: null,
+        createdAt: Date.now().toLocaleString(),
+        user: {
+            id: 'u1',
+            name: 'User 1',
         },
     }]
 }
 
 const Users = [{
     id: 'u1',
-    name: 'Vadim',
-    imageUri: 'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/1.jpg',
-    status: "Hello there, how are you"
+    name: 'User 1',
+    imageUri: require('../assets/images/me.jpg'),
+    status: 'available',
+    Updates: "Hello!"
 },
 {
     id: 'u2',
-    name: 'Lukas',
-    imageUri: 'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/2.jpg',
+    name: 'User 2',
+    imageUri: require('../assets/images/profile_1.jpg'),
+    status: 'available',
 },
 {
     id: 'u3',
-    name: 'Daniil',
-    imageUri: 'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/3.jpg',
+    name: 'User 3',
+    imageUri: require('../assets/images/profile_2.jpg'),
+    status: 'available',
 },
 {
     id: 'u4',
-    name: 'Alex',
-    imageUri: 'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/3.png',
+    name: 'User 4',
+    imageUri: require('../assets/images/profile_3.jpg'),
+    status: 'available',
 },
 {
     id: 'u5',
-    name: 'Vlad',
-    imageUri: 'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/4.jpg',
+    name: 'User 5',
+    imageUri: require('../assets/images/profile_4.jpg'),
+    status: 'available',
 },
 {
     id: 'u6',
-    name: 'Elon Musk',
-    imageUri: 'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/5.jpg',
+    name: 'User 6',
+    imageUri: require('../assets/images/profile_5.jpg'),
+    status: 'Hay! Im using WhatsApp',
 },
 {
     id: 'u7',
-    name: 'Adrian',
-    imageUri: 'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/6.png',
+    name: 'User 7',
+    imageUri: require('../assets/images/profile_6.jpg'),
+    status: 'Hay! Im using WhatsApp',
 },
 {
     id: 'u8',
-    name: 'Borja',
-    imageUri: 'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/7.png',
+    name: 'User 8',
+    imageUri: require('../assets/images/profile_7.jpg'),
+    status: 'Hay! Im using WhatsApp',
 },
 {
     id: 'u9',
-    name: 'Mom',
-    imageUri: 'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/8.png',
+    name: 'User 9',
+    imageUri: require('../assets/images/profile_2.jpg'),
+    status: 'Hay! Im using WhatsApp',
 },
 {
     id: 'u10',
-    name: 'Angelina Jolie',
-    imageUri: 'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/9.png',
+    name: 'User 10',
+    imageUri: require('../assets/images/profile_4.jpg'),
+    status: 'Hay! Im using WhatsApp',
+},
+{
+    id: 'u11',
+    name: 'User 11',
+    imageUri: require('../assets/images/profile_3.jpg'),
+    status: 'Hay! Im using WhatsApp',
+},
+{
+    id: 'u12',
+    name: 'User 12',
+    imageUri: require('../assets/images/profile_5.jpg'),
+    status: 'Hay! Im using WhatsApp',
 }]
 
 const ChatRooms = [{
     id: '1',
     users: [
         {
-        id: 'u1',
-        name: 'Ahmad Musa',
-        imageUri: require('../assets/images/profile_1.jpg'),
-    }, 
-    {
-        id: 'u2',
-        name: 'Adamu John',
-        imageUri: require('../assets/images/profile_2.jpg'),
-    }],
+            id: 'u1',
+            name: 'Olaiya Habeeb',
+            imageUri: require('../assets/images/me.jpg'),
+        },
+        {
+            id: 'u2',
+            name: 'Adamu John',
+            imageUri: require('../assets/images/profile_2.jpg'),
+        }],
     lastMessage: {
         id: 'm1',
-        content: 'Well done this sprint, guys!',
+        content: 'Duis elit qui deserunt laboris sint laboris esse deserunt nisi.',
         createdAt: Date.now().toLocaleString(),
     }
 },
@@ -154,7 +202,7 @@ const ChatRooms = [{
     }],
     lastMessage: {
         id: 'm2',
-        content: 'How are you doing?',
+        content: 'Eiusmod in non minim irure id.',
         createdAt: Date.now().toLocaleString(),
     }
 },
@@ -171,7 +219,7 @@ const ChatRooms = [{
     }],
     lastMessage: {
         id: 'm3',
-        content: 'Hi, Vadim.',
+        content: 'Culpa elit laboris mollit culpa.',
         createdAt: Date.now().toLocaleString(),
     }
 },
@@ -183,12 +231,12 @@ const ChatRooms = [{
         imageUri: require('../assets/images/profile_5.jpg'),
     }, {
         id: 'u5',
-        name: 'Vlad',
-        imageUri: 'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/4.jpg',
+        name: 'User 5',
+        imageUri: '',
     }],
     lastMessage: {
         id: 'm4',
-        content: 'Can you review my last merge',
+        content: 'Enim sit commodo nostrud cillum ex.',
         createdAt: Date.now().toLocaleString(),
     }
 },
@@ -200,12 +248,12 @@ const ChatRooms = [{
         imageUri: require('../assets/images/profile_6.jpg'),
     }, {
         id: 'u6',
-        name: 'Elon Musk',
-        imageUri: 'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/5.jpg',
+        name: 'User 6',
+        imageUri: '',
     }],
     lastMessage: {
         id: 'm5',
-        content: 'I would be happy',
+        content: 'Do occaecat nulla sit pariatur.',
         createdAt: Date.now().toLocaleString(),
     }
 },
@@ -217,12 +265,12 @@ const ChatRooms = [{
         imageUri: require('../assets/images/profile_7.jpg'),
     }, {
         id: 'u7',
-        name: 'Adrian',
-        imageUri: 'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/6.png',
+        name: 'User 7',
+        imageUri: '',
     }],
     lastMessage: {
         id: 'm6',
-        content: 'I have a solution',
+        content: 'Officia aliquip qui.',
         createdAt: Date.now().toLocaleString(),
     }
 },
@@ -234,12 +282,12 @@ const ChatRooms = [{
         imageUri: require('../assets/images/profile_4.jpg'),
     }, {
         id: 'u8',
-        name: 'Borja',
-        imageUri: 'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/7.png',
+        name: 'User 8',
+        imageUri: '',
     }],
     lastMessage: {
         id: 'm7',
-        content: 'How are you doing?',
+        content: 'Incididunt labore tempor.',
         createdAt: Date.now().toLocaleString(),
     }
 },
@@ -251,12 +299,12 @@ const ChatRooms = [{
         imageUri: require('../assets/images/profile_5.jpg'),
     }, {
         id: 'u9',
-        name: 'Mom',
-        imageUri: 'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/8.png',
+        name: 'User 9',
+        imageUri: '',
     }],
     lastMessage: {
         id: 'm8',
-        content: 'Dear, did you eat?',
+        content: 'Esse ea mollit dolor magna duis incididunt.',
         createdAt: Date.now().toLocaleString(),
     }
 },
@@ -265,17 +313,75 @@ const ChatRooms = [{
     users: [{
         id: 'u1',
         name: 'Kolo Dan',
-        imageUri: require('../assets/images/profile_3.jpg'),
+        imageUri: require('../assets/images/profile_1.jpg'),
     }, {
         id: 'u10',
-        name: 'Angelina Jolie',
-        imageUri: 'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/9.png',
+        name: 'User 10',
+        imageUri: '',
     }],
     lastMessage: {
         id: 'm9',
-        content: 'Meet me at the same place',
+        content: 'Ullamco mollit adipisicing nulla nisi irure anim eu commodo sunt ad pariatur proident magna.',
         createdAt: Date.now().toLocaleString(),
     },
 }]
 
-export { Chat, Users, ChatRooms }
+const Stores = [
+    {
+        id: 1,
+        icon: 'store',
+        title: 'Business Profile',
+        subtitle: 'Manage address, hours and website'
+    },
+    {
+        id: 2,
+        icon: 'dots-grid',
+        title: 'Catolog',
+        subtitle: 'Show products and services'
+    },
+    {
+        id: 3,
+        icon: 'bullhorn',
+        title: 'Advertise',
+        subtitle: 'Create ads that lead to WhatsApp'
+    },
+    {
+        id: 4,
+        icon: 'link',
+        title: 'Facebook & Instagram',
+        subtitle: 'Add WhatsApp to your accounts'
+    },
+    {
+        id: 5,
+        icon: 'message-reply-text-outline',
+        title: 'Greeting message',
+        subtitle: 'Welcome new customers automatically'
+    },
+    {
+        id: 6,
+        icon: 'umbrella-beach',
+        title: 'Away Message',
+        subtitle: 'Reuse frequent messages'
+    },
+    {
+        id: 7,
+        icon: 'lightning-bolt',
+        title: 'Quick replies',
+        subtitle: 'Reuse frequent messages'
+    },
+    {
+        id: 8,
+        icon: 'label',
+        title: 'Labels',
+        subtitle: 'Organize chats and custoers'
+    },
+    {
+        id: 9,
+        icon: 'help-circle-outline',
+        title: 'Help center',
+        subtitle: 'Get help, contact us'
+    }
+
+]
+
+export { Chat, Users, ChatRooms, Stores }

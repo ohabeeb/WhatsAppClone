@@ -6,7 +6,7 @@ import { COLORS } from './src/constants/themes';
 import Octicons from 'react-native-vector-icons/Octicons';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import { TopTabBars } from './src/navigations';
-import { ChatScreen } from './src/screens';
+import { ChatScreen, Contacts } from './src/screens';
 
 
 const Stack = createStackNavigator();
@@ -26,14 +26,21 @@ export default function App() {
           headerTintColor: COLORS.white,
           headerTitleAlign: 'left',
           headerRight: () => (
-            <View style={{flexDirection: 'row', gap: 30, paddingHorizontal: 15}}>
-              <Octicons name='search' size={24} color={'#FFF'} onPress={() => console.log('Search')} />
-              <MaterialCommunityIcons name='dots-vertical' size={24} color={'#FFF'} />
+            <View style={{ flexDirection: 'row', gap: 30, paddingHorizontal: 5 }}>
+              <MaterialCommunityIcons name='camera' size={24} color={COLORS.white} />
+              <Octicons name='search' size={24} color={COLORS.white} onPress={() => console.log('Search')} />
+              <MaterialCommunityIcons name='dots-vertical' size={24} color={COLORS.white} />
             </View>
           )
         }}>
-        <Stack.Screen name='TopTabBars'component={TopTabBars} options={{ title: 'WhatsApp' }} />
-        <Stack.Screen name='ChatScreen'component={ChatScreen} options={{ headerShown: false }} />
+        <Stack.Screen
+          name='TopTabBars'
+          component={TopTabBars}
+          options={{ title: 'WA Business', headerTitleStyle: { fontSize: 22 } }} />
+        <Stack.Screen name='ChatScreen' component={ChatScreen} options={{ headerShown: false }} />
+        <Stack.Screen name='Contacts' component={Contacts} options={{
+          headerShown: false,
+        }} />
       </Stack.Navigator>
     </NavigationContainer>
   )

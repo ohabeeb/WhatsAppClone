@@ -1,3 +1,5 @@
 import ChatListItem from './ChatListItem';
+import LabelInfo from './LabelInfo';
+import ContactList from './ContactList';
 
-export {ChatListItem}
+export {ChatListItem, LabelInfo, ContactList}

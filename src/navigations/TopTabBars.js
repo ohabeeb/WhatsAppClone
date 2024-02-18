@@ -1,7 +1,7 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
-import { Calls, Camera, Chats, Status } from '../screens/MaterialTopTabs';
+import { Calls, Store, Chats, Updates } from '../screens/MaterialTopTabs';
 import { COLORS } from '../constants/themes';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
@@ -11,7 +11,6 @@ export default function TopTabBars() {
     return (
         <Tab.Navigator
             initialRouteName='Chats'
-
             screenOptions={{
                 tabBarIndicatorStyle: { backgroundColor: COLORS.white, height: 3 },
                 tabBarLabelStyle: { color: COLORS.white, fontSize: 16, fontWeight: '600' },
@@ -19,14 +18,14 @@ export default function TopTabBars() {
             }
             }>
             <Tab.Screen
-                name='Camera'
-                component={Camera}
+                name='Store'
+                component={Store}
                 options={{
                     tabBarShowLabel: false,
-                    tabBarIcon: () => (<MaterialCommunityIcons name="camera" size={26} color={COLORS.white} />),
+                    tabBarIcon: () => (<MaterialCommunityIcons name="store" size={26} color={COLORS.white} />),
                 }} />
             <Tab.Screen name='Chats' component={Chats} />
-            <Tab.Screen name='Status' component={Status} />
+            <Tab.Screen name='Updates' component={Updates} />
             <Tab.Screen name='Calls' component={Calls} />
         </Tab.Navigator>
     )

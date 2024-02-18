@@ -1,6 +1,6 @@
 import Chats from './Chats';
-import Status from './Status';
+import Updates from './Updates';
 import Calls from './Calls';
-import Camera from './Camera';
+import Store from './Store';
 
-export {Chats, Status, Calls, Camera}
+export {Chats, Updates, Calls, Store}
