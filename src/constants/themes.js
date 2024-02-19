@@ -1,7 +1,7 @@
 
 const COLORS = {
-    primary: '#458989',
-    secondary: '#468c8c',
+    primary: '#376f6f',
+    secondary: '#376f6f',
     tetiary: '#DCF8C4',
     white: '#FFF',
     black: '#000',
@@ -10,10 +10,15 @@ const COLORS = {
 }
 
 const FONTS = {
-    h1: '',
-    h2: '',
-    h3: '',
-    h4: '',
+    SIZES: {
+        small: 16,
+        medium: 18,
+        large: 20,
+        extralarge: 24,
+    },
+    STYLE: {
+        roboto: ''
+    },
 }
 
 

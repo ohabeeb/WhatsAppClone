@@ -5,6 +5,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { COLORS } from './src/constants/themes';
 import Octicons from 'react-native-vector-icons/Octicons';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import Feather from 'react-native-vector-icons/Feather';
 import { TopTabBars } from './src/navigations';
 import { ChatScreen, Contacts } from './src/screens';
 
@@ -27,7 +28,7 @@ export default function App() {
           headerTitleAlign: 'left',
           headerRight: () => (
             <View style={{ flexDirection: 'row', gap: 30, paddingHorizontal: 5 }}>
-              <MaterialCommunityIcons name='camera' size={24} color={COLORS.white} />
+              <Feather name='camera' size={24} color={COLORS.white} />
               <Octicons name='search' size={24} color={COLORS.white} onPress={() => console.log('Search')} />
               <MaterialCommunityIcons name='dots-vertical' size={24} color={COLORS.white} />
             </View>
