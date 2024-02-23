@@ -1,6 +1,6 @@
 import { View, Text, Dimensions, Image, FlatList, Pressable, TextInput } from 'react-native'
 import React from 'react'
-import { COLORS } from '../constants/themes';
+import { COLORS, FONTS } from '../constants/themes';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Fontisto from 'react-native-vector-icons/Fontisto';
@@ -31,14 +31,13 @@ export default function ChatScreen({ route, navigation }) {
                 }>
                 <MaterialCommunityIcons name={'arrow-left'} size={28} color={COLORS.white} onPress={() => navigation.goBack()} />
                 <Image source={users[0]?.imageUri} style={{ width: 40, height: 40, borderRadius: 20 }} />
-                <View style={{ flex: 0.55, marginLeft: 5 }}>
-                    <Text numberOfLines={1} style={{ fontWeight: 'bold', fontSize: 20, color: COLORS.white }}>{users[0]?.name}</Text>
-                    <Text numberOfLines={1} style={{ color: COLORS.white }}>You</Text>
+                <View style={{ flex: 0.55, marginLeft: 3 }}>
+                    <Text numberOfLines={1} style={{ fontWeight: 'bold', fontSize: FONTS.SIZES.medium, color: COLORS.white }}>{users[0]?.name}</Text>
                 </View>
                 <View style={{ flex: 0.45, flexDirection: 'row', justifyContent: 'space-between' }}>
-                    <MaterialCommunityIcons name='video' size={26} color={'#FFF'} onPress={() => console.log('Video')} />
-                    <MaterialCommunityIcons name='phone' size={26} color={'#FFF'} onPress={() => console.log('Phone')} />
-                    <MaterialCommunityIcons name='dots-vertical' size={26} color={'#FFF'} onPress={() => console.log('Dots')} />
+                    <MaterialCommunityIcons name='video' size={26} color={COLORS.white} onPress={() => navigation.navigate('VideoCall') } />
+                    <MaterialCommunityIcons name='phone' size={26} color={COLORS.white} onPress={() => console.log('Video')} />
+                    <MaterialCommunityIcons name='dots-vertical' size={26} color={COLORS.white} onPress={() => console.log('Dots')} />
                 </View>
 
             </View>

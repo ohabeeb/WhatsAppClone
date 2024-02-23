@@ -7,7 +7,7 @@ import Octicons from 'react-native-vector-icons/Octicons';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Feather from 'react-native-vector-icons/Feather';
 import { TopTabBars } from './src/navigations';
-import { ChatScreen, Contacts } from './src/screens';
+import { ChatScreen, Contacts, SignIn, VideoCall } from './src/screens';
 
 
 const Stack = createStackNavigator();
@@ -17,7 +17,7 @@ export default function App() {
     <NavigationContainer>
       <StatusBar backgroundColor={COLORS.secondary} />
       <Stack.Navigator
-        initialRouteName='TopTabBar'
+        initialRouteName='SignIn'
         screenOptions={{
           headerStyle: {
             backgroundColor: COLORS.primary,
@@ -42,6 +42,8 @@ export default function App() {
         <Stack.Screen name='Contacts' component={Contacts} options={{
           headerShown: false,
         }} />
+        <Stack.Screen name='VideoCall' component={VideoCall} options={{headerShown: false}} />
+        <Stack.Screen name="SignIn" component={SignIn} options={{headerShown: false}} />
       </Stack.Navigator>
     </NavigationContainer>
   )
